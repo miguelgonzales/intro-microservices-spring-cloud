@@ -1,0 +1,24 @@
+server:
+  port: 7777
+
+spring:
+  application:
+    name: proxy-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9999/eureka/
+
+zuul:
+  routes:
+    hello-world:
+      path:
+        /hello-world/**
+      #Para mapeo de las url directas a un servicio
+      #url: http://localhost:8080/
+      #Para mapeo de servicios registrados en Eureka
+      serviceId: hello-world
+      sensitive-headers:
+      custom-sensitive-headers: true
+  ignore-security-headers: false

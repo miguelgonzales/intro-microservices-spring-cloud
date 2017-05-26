@@ -10,15 +10,15 @@ spring:
     config:
       server:
         git:
-          uri: file:/home/magonzales/Workshop/LOCAL_REPO_GIT
-          # uri: https://github.com/miguelgonzales/microservice-config
+          # uri: file:/home/magonzales/Workshop/LOCAL_REPO_GIT
+          uri: https://github.com/miguelgonzales/microservice-config
 
-# security:
-  # user:
-    # password: mypassword
+security:
+  user:
+    password: mypassword
 
 logging:
   file: logs/${spring.application.name}.log
   level:
     org.springframework.cloud: 'DEBUG'
-    com.atsistemas: 'DEBUG'
+    com.viajeseci.example: 'DEBUG'
