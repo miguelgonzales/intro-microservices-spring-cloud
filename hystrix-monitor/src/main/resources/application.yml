@@ -1,0 +1,11 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: hystrix-monitor
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9999/eureka/
